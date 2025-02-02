@@ -19,5 +19,18 @@ addButton.addEventListener("click", () => {
 
 function addTodoItem(text) {
     const li = document.createElement("li")
-    li.className = "flex item-center justify-between p-2 bg-gray-100 rounded-lg"
+    li.className = "flex item-center justify-between p-2 bg-gray-100 rounded-lg";
+
+  const span = document.createElement('span');
+  span.textContent = text;
+  li.appendChild(span);
+
+  
+  // Edit Button
+  const editButton = document.createElement('button');
+  editButton.textContent = 'Edit';
+  editButton.className = 'text-blue-500 hover:text-blue-700 focus:outline-none';
+  editButton.addEventListener('click', () => editTodoItem(span));
+  li.appendChild(editButton);
+
 }
