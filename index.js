@@ -33,4 +33,13 @@ function addTodoItem(text) {
   editButton.addEventListener('click', () => editTodoItem(span));
   li.appendChild(editButton);
 
+
+   // Delete Button
+   const deleteButton = document.createElement('button');
+   deleteButton.textContent = 'Delete';
+   deleteButton.className = 'text-red-500 hover:text-red-700 focus:outline-none';
+   deleteButton.addEventListener('click', () => deleteTodoItem(li));
+   li.appendChild(deleteButton);
+ 
+
 }
