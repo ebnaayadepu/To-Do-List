@@ -13,4 +13,11 @@ addButton.addEventListener("click", () => {
    }
    addTodoItem(todoText);
    todoInput.value = "";
-})
+});
+
+//add a new todo item
+
+function addTodoItem(text) {
+    const li = document.createElement("li")
+    li.className = "flex item-center justify-between p-2 bg-gray-100 rounded-lg"
+}
