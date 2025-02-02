@@ -42,4 +42,19 @@ function addTodoItem(text) {
    li.appendChild(deleteButton);
  
 
+   todoList.appendChild(li);
+
 }
+
+// Function to edit a to-do item
+function editTodoItem(span) {
+    const newText = prompt('Edit your to-do:', span.textContent);
+    if (newText !== null && newText.trim() !== '') {
+      span.textContent = newText.trim();
+    }
+  }
+  
+  // Function to delete a to-do item
+  function deleteTodoItem(li) {
+    todoList.removeChild(li);
+  }
